@@ -1,1 +1,2 @@
-# kafka101
+# Kafka 101
+Kafka + Python (+ELK?)

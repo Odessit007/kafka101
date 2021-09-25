@@ -1,0 +1,4 @@
+requests
+avro
+confluent-kafka
+Faker

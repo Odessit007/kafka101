@@ -1,0 +1,39 @@
+{
+  "namespace": "io.codebrews.createuserrequest",
+  "type": "record",
+  "name": "CreateUserRequest",
+  "fields": [
+    {
+      "name": "email",
+      "type": "string"
+    },
+    {
+      "name": "first_name",
+      "type": "string"
+    },
+    {
+      "name": "last_name",
+      "type": "string"
+    },
+    {
+      "name": "address",
+      "type": "string"
+    },
+    {
+      "name": "age",
+      "type": "int"
+    },
+    {
+      "name": "job",
+      "type": "string"
+    },
+    {
+      "name": "gender",
+      "type": "string"
+    },
+    {
+      "name": "has_children_under_sixteen",
+      "type": "boolean"
+    }
+  ]
+}

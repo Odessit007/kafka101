@@ -1,0 +1,31 @@
+{
+  "namespace": "io.codebrews.createproductrequest",
+  "type": "record",
+  "name": "CreateProductequest",
+  "fields": [
+    {
+      "name": "barcode",
+      "type": "string"
+    },
+    {
+      "name": "category",
+      "type": "string"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "price",
+      "type": "float"
+    },
+    {
+      "name": "color",
+      "type": "string"
+    },
+    {
+      "name": "producer_country",
+      "type": "string"
+    },
+  ]
+}
