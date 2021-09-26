@@ -12,7 +12,7 @@ class BaseGenerator:
             batch_size = Random().randint(batch_size_min, batch_size_max)
             batch = [data_class.generate_entity() for _ in range(batch_size)]
             yield batch
-            sleep(3)
+            sleep(5)
 
 
 class ProductGenerator(BaseGenerator):

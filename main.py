@@ -25,3 +25,7 @@ if __name__ == '__main__':
     generator = get_generator(entity)
     for records_batch in generator.generate_records():
         producer.send_records(records_batch)
+
+    # Examples:
+    # python main.py --entity product --topic test-products
+    # python main.py --entity user --topic test-users
