@@ -16,8 +16,8 @@ class User:
     def to_json(self) -> dict:
         return self.__dict__
 
-    @staticmethod
-    def generate_random_user():
+    @classmethod
+    def generate_entity(cls):
         fake = Faker()
         gender = fake.random_element(elements=('F', 'M'))
         age = fake.pyint(min_value=12, max_value=78, step=1)

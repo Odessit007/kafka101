@@ -24,7 +24,7 @@ class Product:
         return self.__dict__
 
     @classmethod
-    def generate_random_product(cls):
+    def generate_entity(cls):
         fake = Faker()
         category = fake.random_element(elements=cls.categories)
         min_value, max_value = cls.cat2range[category]
