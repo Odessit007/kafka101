@@ -1,6 +1,11 @@
 from argparse import ArgumentParser
+import logging
+
 from generator.generators import get_generator
 from producers.producers import get_producer
+
+
+logging.basicConfig(level=logging.INFO)
 
 
 def parse_args():

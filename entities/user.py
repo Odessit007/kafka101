@@ -3,7 +3,7 @@ from faker import Faker
 
 class User:
     def __init__(self, email: str, first_name: str, last_name: str,
-                 age: int, address: str, gender: str, job:str, has_childre_under_sixteen: bool):
+                 age: int, address: str, gender: str, job: str, has_children_under_sixteen: bool):
         self.email = email
         self.first_name = first_name
         self.last_name = last_name
@@ -11,7 +11,7 @@ class User:
         self.address = address
         self.gender = gender
         self.job = job
-        self.has_children_under_16 = has_childre_under_sixteen
+        self.has_children_under_sixteen = has_children_under_sixteen
 
     def to_json(self) -> dict:
         return self.__dict__
@@ -29,5 +29,5 @@ class User:
             age=age,
             job=fake.job(),
             gender=gender,
-            has_childre_under_sixteen=fake.pybool() if age in (19, 60) else False
+            has_children_under_sixteen=fake.pybool() if age in (19, 60) else False
         )
