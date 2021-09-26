@@ -42,18 +42,18 @@ class BaseProducer:
 
 class ProductProducer(BaseProducer):
     def key_extractor(self, product):
-        raise product.barcode
+        return product.barcode
 
     def value_extracotr(self, product):
-        raise product.to_json()
+        return product.to_json()
 
 
 class UserProducer(BaseProducer):
     def key_extractor(self, user):
-        raise user.email
+        return user.email
 
     def value_extracotr(self, user):
-        raise user.to_json()
+        return user.to_json()
 
 
 def get_producer(entity, topic, schema_file, bootstrap_server_url, schema_registry_url):

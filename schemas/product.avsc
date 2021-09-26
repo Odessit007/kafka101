@@ -26,6 +26,6 @@
     {
       "name": "producer_country",
       "type": "string"
-    },
+    }
   ]
 }

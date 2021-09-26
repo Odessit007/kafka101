@@ -8,7 +8,7 @@ def parse_args():
     arg_parser.add_argument('--entity', required=True, help='Entity (user or product)', choices=('user', 'product'))
     arg_parser.add_argument('--topic', required=True, help='Topic name')
     arg_parser.add_argument('--bs', required=False, default='localhost:9092', help='Bootstrap server URL')
-    arg_parser.add_argument('--sr', required=False, default='localhost:8081', help='Schema registry URL')
+    arg_parser.add_argument('--sr', required=False, default='http://localhost:8081', help='Schema registry URL')
     return arg_parser.parse_args()
 
 
