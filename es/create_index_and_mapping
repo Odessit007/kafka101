@@ -1,0 +1,92 @@
+PUT /test-products
+{
+    "settings":
+    {
+        "analysis":
+        {
+            "analyzer":
+            {
+                "fuzzy_analyzer":
+                {
+                    "type": "custom",
+                    "tokenizer": "standard",
+                    "filter": [
+                        "lowercase",
+                        "light_english_stemmer"
+                    ]
+                },
+                "synonym_analyzer":
+                {
+                    "type": "custom",
+                    "tokenizer": "standard",
+                    "filter": [
+                        "lowercase"
+                    ]
+                }
+            },
+            "filter":
+            {
+                "light_english_stemmer":
+                {
+                    "type": "stemmer",
+                    "language": "light_english"
+                }
+            }
+        }
+    },
+    "mappings":
+    {
+        "properties":
+        {
+            "barcode":
+            {
+                "type": "keyword"
+            },
+            "name":
+            {
+                "type": "text",
+                "analyzer": "fuzzy_analyzer"
+            },
+            "category":
+            {
+                "type": "text",
+                "analyzer": "fuzzy_analyzer",
+                "fields":
+                {
+                    "keyword":
+                    {
+                        "type": "keyword"
+                    }
+                }
+            },
+            "price":
+            {
+                "type": "double"
+            },
+            "color":
+            {
+                "type": "text",
+                "analyzer": "fuzzy_analyzer",
+                "fields":
+                {
+                    "keyword":
+                    {
+                        "type": "keyword"
+                    }
+                }
+            },
+			"producer_country":
+            {
+                "type": "text",
+                "analyzer": "fuzzy_analyzer",
+                "fields":
+                {
+                    "keyword":
+                    {
+                        "type": "keyword"
+                    }
+                }
+            }
+        }
+    }
+}
